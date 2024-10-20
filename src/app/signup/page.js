@@ -16,6 +16,7 @@ export default function SignUp() {
       try {
         const res = await createUserWithEmailAndPassword(email, password);
         console.log(res);
+        sessionStorage.setItem('user', true);
         setEmail("");
         setPassword("");
       } catch (error) {
